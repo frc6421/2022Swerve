@@ -4,6 +4,7 @@
 
 package frc.robot;
 
+import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.math.util.Units;
 
 /**
@@ -31,6 +32,31 @@ public final class Constants {
     public static final double ksVolts = 0.54903;
     public static final double kvVoltSecondsPerMeter = 3.0772;
     public static final double kaVoltSecondsSquaredPerMeter = 0.41017;
+
+    /**
+     * Maximum velocity for autonomous
+     */
+    public static final double MAX_VELOCITY_METERS_PER_SECOND = 4;
+    /**
+     * Maximum acceleration for autonomous
+     */
+    public static final double MAX_ACCELERATION_METERS_PER_SECOND_SQUARED = 2;
+    /**
+     * Max angular velocity and acceleration for autonomous
+     */
+    public static final double MAX_ANGULAR_VELOCITY_RADIAN_PER_SECOND = 2 * Math.PI;
+    public static final double MAX_ANGULAR_ACCELERATION_RADIAN_PER_SECOND_SQUARED = Math.PI;
+    /**
+     * Theta constraints for autonomous
+     */
+    public static final TrapezoidProfile.Constraints THETA_CONTROLLER_CONSTRAINTS =
+        new TrapezoidProfile.Constraints(MAX_ANGULAR_VELOCITY_RADIAN_PER_SECOND, MAX_ANGULAR_ACCELERATION_RADIAN_PER_SECOND_SQUARED);
+    /**
+     * PID controllers for autonomous
+     */
+    public static final double P_X_CONTROLLER = 2.1821;
+    public static final double P_Y_CONTROLLER = 2.1821;
+    public static final double kP_THETA_CONTROLLER = 1;
 
     public static final int DRIVETRAIN_PIGEON_ID = 0; // FIXME Set Pigeon ID
 
