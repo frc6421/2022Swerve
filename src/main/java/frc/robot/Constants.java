@@ -28,6 +28,10 @@ public final class Constants {
      */
     public static final double DRIVETRAIN_WHEELBASE_METERS = Units.inchesToMeters(15.75); // FIXME Measure and set wheelbase
 
+    public static final double ksVolts = 0.54903;
+    public static final double kvVoltSecondsPerMeter = 3.0772;
+    public static final double kaVoltSecondsSquaredPerMeter = 0.41017;
+
     public static final int DRIVETRAIN_PIGEON_ID = 0; // FIXME Set Pigeon ID
 
     public static final int FRONT_LEFT_MODULE_DRIVE_MOTOR = 12; // FIXME Set front left module drive motor ID

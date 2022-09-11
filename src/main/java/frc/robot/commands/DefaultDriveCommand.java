@@ -14,8 +14,8 @@ public class DefaultDriveCommand extends CommandBase {
     private final DoubleSupplier m_translationYSupplier;
     private final DoubleSupplier m_rotationSupplier;
 
-    private final SlewRateLimiter slewRatex = new SlewRateLimiter(10);
-    private final SlewRateLimiter slewRatey = new SlewRateLimiter(10);
+    private final SlewRateLimiter slewRatex = new SlewRateLimiter(15);
+    private final SlewRateLimiter slewRatey = new SlewRateLimiter(15);
 
 
     public DefaultDriveCommand(DrivetrainSubsystem drivetrainSubsystem,
